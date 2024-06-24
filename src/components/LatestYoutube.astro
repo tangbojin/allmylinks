@@ -8,28 +8,40 @@
     loader.style.display = "block";
 
     const loadVideo = async (iframe) => {
-      const cid = "UC36_js-krsAHAEAWpEDhHtw"; //this is the user ID from your Youtube channel URL
+      /* const cid = "UC36_js-krsAHAEAWpEDhHtw"; //this is the user ID from your Youtube channel URL
       const API_key = "&api_key=wmbjfv0ybbzjsaceaojxrbm9aaelzzq2bbe7mgws"; //in order to get your free public API_key, you will need to create an acc. in https://rss2json.com/
       const channelURL = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`);
-      const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}&api_key=${API_key}`;
+      const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}&api_key=${API_key}`; */
 
+      
+      const now = new Date();
+      const year = now.getFullYear(); // 获取当前年份
+      const month = (now.getMonth() + 1).toString().padStart(2, "0"); // 获取当前月份，注意getMonth()返回的是0-11，所以需要加1
+      const reqURL = `https://blog.tangbojin.cn/archives/${year}/${month}/`;
       try {
         const response = await fetch(reqURL);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+        console.log(response);
+        if(response.status == 404){
+          iframe.setAttribute("src", "/img/404.png");
+          iframe.setAttribute("style", "overflow: auto;text-align: center; margin-left: 6%;");
+          loader.style.display = "none";
+        }else{
+          iframe.setAttribute("src", reqURL);
+          loader.style.display = "none"; // Hide the loader after loading the video
         }
-        const result = await response.json();
+
+        /* console.log(result);
         if (result.items && result.items.length > 0) {
           const videoNumber = iframe.getAttribute("vnum");
           const link = result.items[videoNumber].link;
           const id = link.split("v=")[1];
-          iframe.setAttribute("src", `https://youtube.com/embed/${id}?controls=1&autoplay=0`);
+          iframe.setAttribute("src", reqURL);
           loader.style.display = "none"; // Hide the loader after loading the video
         } else {
           throw new Error("No videos found in the feed.");
-        }
+        } */
       } catch (error) {
-        console.error("Error loading video:", error);
+        console.error("加载博文页面出错:", error);
         loader.style.display = "none"; // Hide loader in case of error
       }
     };
@@ -42,13 +54,13 @@
 </script>
 
 <div class="vid__container">
-  <h2 class="vid__title">My latest Video ❤️</h2>
+  <h2 class="vid__title" style="color: rgb(119, 15, 255)">这个月写的博文</h2>
   <img class="heart__loader" src="./img/loadcat.gif" alt="loader" />
   <iframe
     class="latestVideoEmbed"
     vnum="0"
     width="560"
-    height="315"
+    height="720"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin"
@@ -72,7 +84,7 @@
   .latestVideoEmbed {
     width: 100%;
     max-width: 560px;
-    height: 315px;
+    height: 720px;
     min-height: 224px;
     padding: 3rem;
     min-width: 337px;

@@ -1,7 +1,7 @@
 const userData = [
   {
-    userName: "Sofia Osorio",
-    userDesc: "Web Developer",
+    userName: "tangbojin",
+    userDesc: "代码民工||懒癌患者||厨艺绝缘体",
     userPic: "https://github.com/SofiDevO.png",
     userPicDark: "/img/pedro_raccon.gif",
   },
@@ -12,48 +12,43 @@ const userData = [
 
 const socialLinks = [
   {
-    socialName: "LinkedIn",
-    socialUl: "#",
-    socialIcon: "mingcute:linkedin-fill",
+    socialName: "网抑云",
+    socialUl: "https://music.163.com/#/user/home?id=46643840",
+    socialIcon: "simple-icons:neteasecloudmusic",
   },
   {
     socialName: "GitHub",
-    socialUl: "#",
-    socialIcon: "fa6-brands:github-alt",
+    socialUl: "https://github.com/tangbojin",
+    socialIcon: "simple-icons:github",
   },
   {
-    socialName: "Instagram",
+    socialName: "120992728",
     socialUl: "#",
-    socialIcon: "ri:instagram-fill",
+    socialIcon: "bi:tencent-qq",
   },
   {
-    socialName: "X",
-    socialUl: "#",
-    socialIcon: "prime:twitter",
-  },
-  {
-    socialName: "Whatsapp",
-    socialUl: "#",
-    socialIcon: "mingcute:whatsapp-fill",
+    socialName: "微博",
+    socialUl: "https://weibo.com/u/3121256175",
+    socialIcon: "ri:weibo-fill",
   },
 ];
 
 const userLinks = [
     {
-        title: "Portfolio",
-        link:"https://itssofi.dev/",
-        icon:"ant-design:code-filled"
+		title: "花里胡哨搭着好看的博客",
+        link: "https://blog.tangbojin.cn/",
+        icon: "ooui:article-rtl"
     },
     {
-        title: "Sucríbete a mi canal",
-        link:"https://www.youtube.com/channel/UC36_js-krsAHAEAWpEDhHtw",
-        icon:"mingcute:youtube-fill"
+        title: "占位符|我不发抖音的哈",
+        link: "#",
+        icon: "iconoir:tiktok"
 
     },
     {
-        title: "Únete a Discord",
-        link:"https://discord.com/invite/wjERezH2",
-        icon:"ic:outline-discord"
+        title: "占位符2|You Know I won't ……",
+        link: "https://space.bilibili.com/432250283",
+        icon: "ant-design:bilibili-filled"
     },
 ]
 

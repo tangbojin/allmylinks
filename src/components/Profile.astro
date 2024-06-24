@@ -11,7 +11,7 @@ import { userData } from "../data/userData.js";
     userData.map((data) => (
       <>
         <h1>{data.userName}</h1>
-        <p>{data.userDesc}</p>
+        <h3>{data.userDesc}</h3>
       </>
     ))
   }
@@ -57,10 +57,10 @@ import { userData } from "../data/userData.js";
   }
 
   .photo {
-    background-image: url(https://github.com/SofiDevO.png);
+    background-image: url(/img/tbj_light.jpg);
   }
   :global(.dark) .photo {
     border: 3px solid aqua;
-    background-image: url(/img/sofi_dark.jpg);
+    background-image: url(/img/tbj_dark.jpg);
   }
 </style>
