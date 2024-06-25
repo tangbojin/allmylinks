@@ -11,7 +11,7 @@ import { userData } from "../data/userData.js";
     userData.map((data) => (
       <>
         <h1>{data.userName}</h1>
-        <h3>{data.userDesc}</h3>
+        <h2>{data.userDesc}</h2>
       </>
     ))
   }
@@ -43,6 +43,9 @@ import { userData } from "../data/userData.js";
 
   :global(.dark) .profile__banner {
     h1 {
+      color: var(--secundary-color);
+    }
+    h2 {
       color: var(--secundary-color);
     }
   }
