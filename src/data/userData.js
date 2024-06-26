@@ -1,7 +1,7 @@
 const userData = [
   {
     userName: "tangbojin",
-    userDesc: "代码民工||懒癌患者||厨艺绝缘体",
+    userDesc: "代码民工||懒癌患者||厨艺绝缘体||人生臭棋篓子||生活缝补匠",
     userPic: "https://github.com/SofiDevO.png",
     userPicDark: "/img/pedro_raccon.gif",
   },
