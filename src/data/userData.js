@@ -1,7 +1,7 @@
 const userData = [
   {
     userName: "tangbojin",
-    userDesc: "代码民工||懒癌患者||厨艺绝缘体||人生臭棋篓子||生活缝补匠",
+    userDesc: "代码民工||懒癌患者||厨艺绝缘体||生活缝补匠",
     userPic: "https://github.com/SofiDevO.png",
     userPicDark: "/img/pedro_raccon.gif",
   },
@@ -35,20 +35,25 @@ const socialLinks = [
 
 const userLinks = [
     {
-		title: "花里胡哨搭着好看的博客",
+		    title: "博客",
         link: "https://blog.tangbojin.cn/",
         icon: "ooui:article-rtl"
     },
     {
-        title: "占位符|我不发抖音的哈",
-        link: "#",
-        icon: "iconoir:tiktok"
+        title: "X||Twitter",
+        link: "https://x.com/tbj120992728?t=bxF7PYyS5bPwYg836v5WSg&s=09",
+        icon: "ri:twitter-x-line"
 
     },
     {
-        title: "占位符2|You Know I won't ……",
-        link: "https://space.bilibili.com/432250283",
-        icon: "ant-design:bilibili-filled"
+        title: "Telegram",
+        link: "https://t.me/digar_outman",
+        icon: "bi:telegram"
+    },
+    {
+      title: "Tiktok",
+      link: "https://v.douyin.com/i65tN2cB/ 2@1.com :0pm",
+      icon: "hugeicons:tiktok"
     },
 ]
 
